@@ -309,4 +309,8 @@ footer h4 {
     padding-right: 20px;
     cursor: pointer;
   }
+
+  .separacao{
+    left: 45%;
+  }
 }

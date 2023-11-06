@@ -34,10 +34,18 @@
         </section>
         <h4>todos os direitos reservados</h4>
         <!-- conteudo_footer -->
-     
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            jQuery(document).ready(function($) {
+                $('.menu-mobile i.fas.fa-bars').click(function() {
+                    $('ul.menu-mobile--links').toggle();
+                });
+            });
+        </script>
     </footer>
     <!-- footer -->
     <?php wp_footer(); ?>
-    <script src="<?php echo get_theme_root_uri(); ?>/Tema-Passarinho/mobile-menu.js"></script>   
-</body>
-</html>
+
+    </body>
+
+    </html>
