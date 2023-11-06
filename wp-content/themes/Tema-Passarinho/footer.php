@@ -6,13 +6,13 @@
             <div class="conteudo_footer--menu-footer">
                 <ul>
                     <li>
-                        <a href="">Home</a>
+                        <a href="<?php echo home_url(); ?>">Home</a>
                     </li>
                     <li>
-                        <a href="">Passarinhos</a>
+                        <a href="/StrongWay/passarinhos/">Passarinhos</a>
                     </li>
                     <li>
-                        <a href="">Cadastrar passarinhos</a>
+                        <a href="/StrongWay/cadastrar/">Cadastrar passarinhos</a>
                     </li>
                 </ul>
             </div>
