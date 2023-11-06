@@ -33,9 +33,9 @@ if ($query->have_posts()) :
 
     while ($query->have_posts()) : $query->the_post();
         echo '<li style="list-style: none;">';
-        echo '<div style="text-align: center;">'; // Centraliza o conteúdo
+        echo '<div style="text-align: center; padding: 15px 0;">'; // Centraliza o conteúdo
         the_post_thumbnail('thumbnail'); // Exibe a miniatura do post
-        echo '<h2><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2>'; // Torna o título um link para a página individual
+        echo '<h2><a href="' . get_permalink() . '" style="text-decoration: none; color: #130a4e;">' . get_the_title() . '</a></h2>'; // Torna o título um link para a página individual
         echo '</div>';
         echo '</li>';
     endwhile;
