@@ -34,7 +34,10 @@
         </section>
         <h4>todos os direitos reservados</h4>
         <!-- conteudo_footer -->
+     
     </footer>
     <!-- footer -->
+    <?php wp_footer(); ?>
+    <script src="<?php echo get_theme_root_uri(); ?>/Tema-Passarinho/mobile-menu.js"></script>   
 </body>
 </html>

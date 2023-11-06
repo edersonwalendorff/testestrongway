@@ -7,26 +7,35 @@ Description: Tema para o Teste para programador WordPress
 Version: 1.0
 */
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-body{
+html {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
-.center{
+.center {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 2%;
 }
 
-section.topo{
+section.topo {
   background-image: linear-gradient(114deg, #250e8a, #15aba9);
   padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -53,18 +62,24 @@ ul.menu-desktop {
   justify-content: space-between;
 }
 
-.menu-desktop li {
+.menu-mobile {
+  display: none;
+}
+
+.menu-desktop li,
+.menu-mobile li {
   list-style: none;
   margin: 0 20px 0 0;
 }
 
-.menu-desktop li a {
+.menu-desktop li a,
+.menu-mobile li a {
   text-decoration: none;
   color: white;
   opacity: 0.8;
 }
 
-.menu-desktop li a:hover{
+.menu-desktop li a:hover {
   opacity: 1.5;
 }
 
@@ -97,7 +112,7 @@ section.chamada {
   padding: 10px;
 }
 
-.conteudo_chamada a:hover{
+.conteudo_chamada a:hover {
   background-color: #c9661b;
   padding: 9px;
 }
@@ -133,10 +148,10 @@ main {
   font: caption;
   font-weight: 600;
   font-size: 32px;
-  color:#000000c7;
+  color: #000000c7;
 }
 
-.conteudo_pagina--icones{
+.conteudo_pagina--icones {
   display: flex;
   margin: 85px auto;
   text-align: center;
@@ -162,6 +177,9 @@ main {
   color: #1e1d1d;
 }
 
+footer {
+  margin-top: auto;
+}
 
 .conteudo_footer {
   display: flex;
@@ -223,4 +241,72 @@ footer h4 {
   color: white;
   font-weight: 100;
   background-image: linear-gradient(9deg, #250e8a, #15aba9);
+}
+
+/* Resposivo */
+
+@media screen and (max-width: 1000px) {
+  section.chamada {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .conteudo_chamada--imagem img {
+    display: none;
+  }
+
+  .conteudo_pagina--icones {
+    flex-direction: column;
+  }
+
+  .conteudo_chamada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .conteudo_chamada h2,
+  .conteudo_chamada p {
+    text-align: center;
+  }
+
+  .pods-submittable-fields{
+    margin: 25px 2%!important;
+    right: 0!important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menu-desktop {
+    display: none !important;
+  }
+
+  .menu-mobile {
+    display: flex;
+    position: relative;
+  }
+
+  .menu-mobile li {
+    padding: 8px 0;
+  }
+
+  ul.menu-mobile--links {
+    display: none;
+    position: absolute;
+    background-color: #10368f;
+    border-radius: 5%;
+    width: 195px;
+    right: 20px;
+    top: 18px;
+    padding: 18px;
+    white-space: nowrap;
+    z-index: 999;
+  }
+
+  i.fas.fa-bars {
+    color: white;
+    font-size: 32px;
+    padding-right: 20px;
+    cursor: pointer;
+  }
 }

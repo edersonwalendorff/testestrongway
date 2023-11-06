@@ -1,37 +1,16 @@
+<?php get_header(); ?>
 
-<?php get_header();?>
+<div id="primary" class="content-area">
+    <main id="main" class="site-main">
+        <?php
+        while ( have_posts() ) :
+            the_post();
 
-    <!--main -->
-    <main>
-        <!-- conteudo_pagina -->
-        <section class="conteudo_pagina">
-            <h2>
-                Contribua para o maior acervo de pássaros da internet
-            </h2>
-            <!-- conteudo_pagina--icones -->
-            <div class="conteudo_pagina--icones">
-                <!-- icones--box -->
-                <div class="icones--box">
-                    <img src="<?php echo get_theme_root_uri(); ?>/Tema-Passarinho/images/observacao-de-passaros.png" alt="observação de passaros">
-                    <h3>Lorem ipsum dolor sit</h3>
-                    <p>Voluptatibus unde tempora itaque quasi voluptas vero repudiandae veniam laudantium laboriosam, delectus dolorum assumenda. Explicabo ducimus amet eaque magni fugit ex distinctio?</p>
-                </div>
-                <div class="icones--box">
-                    <img src="<?php echo get_theme_root_uri(); ?>/Tema-Passarinho/images/observacao-de-passaros (2).png" alt="observação de passaros">
-                    <h3>Lorem ipsum dolor sit</h3>
-                    <p>Voluptatibus unde tempora itaque quasi voluptas vero repudiandae veniam laudantium laboriosam, delectus dolorum assumenda. Explicabo ducimus amet eaque magni fugit ex distinctio?</p>
-                </div>
-                <div class="icones--box">
-                    <img src="<?php echo get_theme_root_uri(); ?>/Tema-Passarinho/images/observacao-de-passaros (3).png" alt="observação de passaros">
-                    <h3>Lorem ipsum dolor sit</h3>
-                    <p>Voluptatibus unde tempora itaque quasi voluptas vero repudiandae veniam laudantium laboriosam, delectus dolorum assumenda. Explicabo ducimus amet eaque magni fugit ex distinctio?</p>
-                </div>
-                <!-- icones--box -->
-            </div>            
-            <!-- conteudo_pagina--icones -->
-        </section>
-        <!-- conteudo_pagina -->
+            get_template_part( 'template-parts/content', get_post_type() );
+
+        endwhile;
+        ?>
     </main>
-    <!--main -->
+</div>
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
